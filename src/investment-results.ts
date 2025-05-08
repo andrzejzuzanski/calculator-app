@@ -1,13 +1,11 @@
+import { InvestmentInput } from './investment-input.model';
 // Use the below code as a help
 // e.g., integrate it into a service or component
 // You may need to tweak it, depending on where and how you use it
 
-function calculateInvestmentResults(
-  initialInvestment: number,
-  duration: number,
-  expectedReturn: number,
-  annualInvestment: number
-) {
+function calculateInvestmentResults(data: InvestmentInput) {
+  const { initialInvestment, duration, expectedReturn, annualInvestment } =
+    data;
   const annualData = [];
   let investmentValue = initialInvestment;
 
